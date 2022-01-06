@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from  'react-router-dom'
 import axios from 'axios'
+import './AllPokemons.css'
 
 function AllPokemons() {
 
@@ -35,7 +36,7 @@ function AllPokemons() {
 
   return (
     <div className="AllPokemons">
-      <form style={{margin: "auto", width: "60%", textAlign: "center"}}>
+      <form className="allPokemons_body" style={{margin: "auto", width: "60%", textAlign: "center"}}>
         <h3>Pokemons</h3>
         {(pokemons.length > 0) ? currentData.map((item, key) => (
           <div key={key}>
