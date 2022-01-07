@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from  'react-router-dom'
+import Loader from 'react-loader-spinner'
 import axios from 'axios'
 
 function TypePokemons() {
@@ -30,7 +31,7 @@ function TypePokemons() {
             ))}
             
           </div>
-        )) : <p>Loading...</p> }
+        )) : <Loader type="Puff" color="#ff6666" style={{textAlign: "center"}}/> }
       </form>
     </div> 
     

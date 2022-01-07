@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from  'react-router-dom'
 import axios from 'axios'
+import Loader from 'react-loader-spinner'
 import './AllPokemons.css'
 
 function AllPokemons() {
@@ -42,7 +43,7 @@ function AllPokemons() {
           <div key={key}>
             <p style={{fontFamily: "sans-serif", fontSize: "18px"}}><Link to={`/pokemon/${item.name}`}>{item.name}</Link></p>
           </div>
-        )) : <p>Loading...</p> }
+        )) : <Loader type="Puff" color="#ff6666" style={{textAlign: "center"}}/> }
       </form>
       <div style={{display: "flex", width: "10%", margin: "auto", justifyContent: "center"}}>
         {pageNumber.map((item, key) => (

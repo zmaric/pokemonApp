@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from  'react-router-dom'
 import axios from 'axios'
+import Loader from 'react-loader-spinner'
 import './Pokemon.css'
 
 function Pokemon() {
@@ -70,7 +71,7 @@ function Pokemon() {
             </div>
           </div>
         </div>
-      )) : <p>Loading...</p> }
+      )) : <Loader type="Puff" color="#ff6666" style={{textAlign: "center"}}/> }
     </div> 
   );
 }
