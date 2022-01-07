@@ -36,11 +36,11 @@ function AllPokemons() {
 
   return (
     <div className="AllPokemons">
-      <form className="allPokemons_body" style={{margin: "auto", width: "60%", textAlign: "center"}}>
-        <h3>Pokemons</h3>
+      <form className="allPokemons_body" style={{margin: "auto", width: "50%", textAlign: "center"}}>
+        <h3 style={{fontFamily: "sans-serif", fontSize: "28px"}}>Pokemons</h3>
         {(pokemons.length > 0) ? currentData.map((item, key) => (
           <div key={key}>
-            <p><Link to={`/pokemon/${item.name}`}>{item.name}</Link></p>
+            <p style={{fontFamily: "sans-serif", fontSize: "18px"}}><Link to={`/pokemon/${item.name}`}>{item.name}</Link></p>
           </div>
         )) : <p>Loading...</p> }
       </form>

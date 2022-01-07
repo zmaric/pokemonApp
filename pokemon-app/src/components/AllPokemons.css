@@ -1,5 +1,4 @@
 .allPokemons_body {
     background: linear-gradient(#ff6666 50%, white 50%);
-    border: 1px solid black;
     border-radius: 45%;
 }

@@ -1,0 +1,44 @@
+.pokemonDataDiv {
+    display: flex;
+    background: white;
+    box-shadow: 2px 3px 23px rgba(0,0,0,.1);
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+}
+
+.left{
+    width: 50%;
+}
+
+.right{
+    width: 50%;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dataRow {
+    display: flex;
+    padding: 0 50px;
+}
+
+.dataRow p, select, label {
+    padding: 0 5px;
+}
+
+.pokemonMoves {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/* scrollbar */
+.pokemonDataDiv ::-webkit-scrollbar {   
+    width: 16px;
+}
+.pokemonDataDiv ::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+.pokemonDataDiv ::-webkit-scrollbar-thumb {
+    background-color: #d4aa70;
+    border-radius: 100px;
+}
