@@ -8,12 +8,20 @@
 }
 
 .left{
-    width: 50%;
+    width: 40%;
 }
 
 .right{
-    width: 50%;
+    width: 60%;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dataPart {
+    width: 70%;
+}
+
+.imgPart {
+    width: 30%;
 }
 
 .dataRow {
