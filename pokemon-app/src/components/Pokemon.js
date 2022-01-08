@@ -17,7 +17,7 @@ function Pokemon() {
     const getData = async () => {
       const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon_name}/`)
       setPokemonData([res.data])
-      console.log(res.data) 
+      // console.log(res.data)
     }
 
     getData()

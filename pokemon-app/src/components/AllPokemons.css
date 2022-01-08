@@ -1,4 +1,27 @@
 .allPokemons_body {
-    background: linear-gradient(#ff6666 50%, white 50%);
     border-radius: 45%;
+    /* background: linear-gradient(#ff6666 50%, white 50%); */
+    font-family: "Pokemon Solid", sans-serif;
+    font-size: "18px";
+    color: yellow;
 }
+
+.allPokemons_body h3{
+    -webkit-text-stroke: 1px blue;
+    font-size: 60px;
+}
+
+.allPokemons_body img {
+    height: 100px;
+    weight: 100px;
+}
+
+.allPokemons_body p, a {
+    transform: translate(0, -215%);
+    color: yellow;
+    -webkit-text-stroke: 1px blue;
+    font-size: 18px;
+}
+
+
+

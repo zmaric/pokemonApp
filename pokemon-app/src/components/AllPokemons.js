@@ -3,6 +3,7 @@ import { Link } from  'react-router-dom'
 import axios from 'axios'
 import Loader from 'react-loader-spinner'
 import './AllPokemons.css'
+import image from '../ball.png'
 
 function AllPokemons() {
 
@@ -14,7 +15,7 @@ function AllPokemons() {
       const getData = async () => {
       const res = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=1000')
       setPokemons(res.data.results)
-      // console.log(res.data.count)
+      console.log(res.data)
       }
       getData()
   }, [])
@@ -63,30 +64,56 @@ function AllPokemons() {
     setPageNumberSearch(search_pagenumber)
   }, [searchedPokemons])
 
+  // Pokemon ball icon was used by author smashicons from flaticon.com
+  // <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
+
+  const [showAll, setShowAll] = useState(false)
+
+  const setShowAllPokemons = (event) => {
+    event.preventDefault()
+    setShowAll(true)
+  }
+
+  const unsetShowAllPokemons = (event) => {
+    event.preventDefault()
+    setShowAll(false)
+  }
+
+  console.log(pokemons.length)
   return (
     <div className="AllPokemons">
+      <head>
+        <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet"/>
+      </head>
       <form className="allPokemons_body" style={{margin: "auto", width: "50%", textAlign: "center"}}>
-        <h3 style={{fontFamily: "sans-serif", fontSize: "28px"}}>Pokemons</h3>
-        <div className="search_pokemon_div">
+        <h3>Pokemons</h3>
+        <div className="searchShowDiv">
+          {(!showAll) ? <button onClick={setShowAllPokemons}>Show all pokemons</button> : <button onClick={unsetShowAllPokemons}>Show pokemons in table</button>}
           <input type="text" id="search_pokemon" placeholder="Search.." onChange={(event => {setSearchData(event.target.value)})} />
         </div>
-        {(pokemons.length > 0 && !searchData) ? currentData.map((item, key) => (
+        <div>
+        {(pokemons.length > 0 && !searchData && !showAll) ? currentData.map((item, key) => (
           <div key={key}>
-            <p style={{fontFamily: "sans-serif", fontSize: "18px"}}><Link to={`/pokemon/${item.name}`}>{item.name}</Link></p>
+            <img src={image}/><p><Link to={`/pokemon/${item.name}`}>{item.name}</Link></p>
           </div>
-        )) : (pokemons.length > 0 && searchData) ? currentDataSearch.map((item, key) => (
+        )) : (pokemons.length > 0 && searchData && !showAll) ? currentDataSearch.map((item, key) => (
           <div key={key}>
-            <p style={{fontFamily: "sans-serif", fontSize: "18px"}}><Link to={`/pokemon/${item.name}`}>{item.name}</Link></p>
+            <img src={image}/><p><Link to={`/pokemon/${item.name}`}>{item.name}</Link></p>
+          </div>
+        )) : (showAll) ? pokemons.map((item, key) => (
+          <div key={key}>
+            <img src={image}/><p><Link to={`/pokemon/${item.name}`}>{item.name}</Link></p>
           </div>
         )) : <Loader type="Puff" color="#ff6666" style={{textAlign: "center"}}/> }
+        </div>
       </form>
       <div style={{display: "flex", width: "10%", margin: "auto", justifyContent: "center"}}>
-        {(!searchData) ? pageNumber.map((item, key) => (
+        {(!searchData && !showAll) ? pageNumber.map((item, key) => (
           <li key={key} style={{listStyle: "none", width: "25px", padding: "0 2px" }} onClick={() => setPages(item)}>{item}</li>
-        )) : pageNumberSearch.map((item, key) => (
+        )) : (searchData && !showAll) ? pageNumberSearch.map((item, key) => (
           <li key={key} style={{listStyle: "none", width: "25px", padding: "0 2px" }} onClick={() => setPages(item)}>{item}</li>
-        ))}
+        )) : null}
       </div>
     </div> 
     
