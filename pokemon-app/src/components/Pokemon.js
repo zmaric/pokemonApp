@@ -45,64 +45,62 @@ function Pokemon() {
       </head>
       <div>
         <Link to="/">
-          <button style={{margin: "0 200px"}}>Back to homepage</button>
+          <button style={{margin: "20px 260px", color: "red", background: "white"}}>Back to homepage</button>
         </Link>
       </div>
+      <div>
       {(pokemonData.length > 0) ? pokemonData.map((item, key) => (
-        <div key={key}>
-          <div className="pokemonDataDiv">
+        <div>
+          <div key={key} className="pokemonDataDiv">
             <div className="left">
               <img style={{width: "100%"}} src={item.sprites.other.home.front_default}/>
             </div>
             <div className="right">
               <p style={{fontFamily: "Allerta Stencil", fontSize: "32px", textAlign: "center"}}>{item.name.toUpperCase()}</p>
-              <div style={{display: "flex"}}>
-                <div className="dataPart">
-                  <div className="dataRow">
-                    <p>Height: </p>
-                    <p>{item.height}</p>
-                  </div>
-                  <div className="dataRow">
-                    <p>Weight: </p>
-                    <p>{item.weight}</p>
-                  </div>
-                  <div className="dataRow">
-                    <p>Type: </p>
-                    {item.types.map((type, key) => (
-                      <p key={key}><Link to={`/type/${type.type.name}`}>{type.type.name}</Link></p>
-                    ))}
-                  </div>
-                  <div className="dataRow">
-                    <p>Abilities: </p>
-                    {item.abilities.map((ability,key) => (
-                      <p key={key}>{ability.ability.name}</p>
-                    ))}
-                  </div>
-                  <div className="dataRow">
-                    <label>Moves: </label>
-                    <div className="pokemonMoves" style={{height: "150px"}}>
-                      { item.moves.map((move, key) => <p key={key}>{move.move.name}</p>) }
-                    </div>
-                  </div>
-                </div>
-                <div className="imgPart">
-                  <div>
-                    {(images.length > 0) ? <ImageSlider
-                      width={325}
-                      height={300}
-                      bgColor={'white'}
-                      images={images}
-                      showBullets={true}
-                      autoPlay={true}
-                      style={{borderRadius: "20%"}}
-                    /> : null }
-                  </div>
+              <div className="dataRow">
+                <b>Height: </b>
+                <p>{item.height}</p>
+              </div>
+              <div className="dataRow">
+                <b>Weight: </b>
+                <p>{item.weight}</p>
+              </div>
+              <div className="dataRow">
+                <b>Type: </b>
+                {item.types.map((type, key) => (
+                  <p key={key}><Link to={`/type/${type.type.name}`}>{type.type.name}</Link></p>
+                ))}
+              </div>
+              <div className="dataRow">
+                <b>Abilities: </b>
+                {item.abilities.map((ability,key) => (
+                  <p key={key}>{ability.ability.name}</p>
+                ))}
+              </div>
+              <div className="dataRow">
+                <b>Moves: </b>
+                <div className="pokemonMoves" style={{height: "150px"}}>
+                  { item.moves.map((move, key) => <p key={key}>{move.move.name}</p>) }
                 </div>
               </div>
             </div>
           </div>
+        <button style={{margin: "0 475px"}} onClick={() => document.getElementsByClassName("imgSliderDiv")[0].style.display = "block"}>Show more pictures</button>
+        <div className="imgSliderDiv">
+          <button onClick={() => document.getElementsByClassName("imgSliderDiv")[0].style.display = "none"}>X</button>
+          {(images.length > 0) ? <ImageSlider
+            width={425}
+            height={400}
+            bgColor={'white'}
+            images={images}
+            showBullets={true}
+            autoPlay={true}
+            style={{borderRadius: "25px"}}
+            /> : null }
+          </div>
         </div>
       )) : <Loader type="Puff" color="#ff6666" style={{textAlign: "center"}}/> }
+      </div>
     </div> 
   );
 }

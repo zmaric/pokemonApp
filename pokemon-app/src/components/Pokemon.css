@@ -1,3 +1,13 @@
+.Pokemon button{
+    border: none;
+    cursor: pointer;
+    padding: 5px 30px;
+    background: #3399ff;
+    font-family: "Allerta Stencil";
+    color: yellow;
+    font-size: 16px;    
+}
+
 .pokemonDataDiv {
     display: flex;
     background: white;
@@ -8,29 +18,23 @@
 }
 
 .left{
-    width: 40%;
+    width: 50%;
 }
 
 .right{
-    width: 60%;
+    width: 50%;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.dataPart {
-    width: 70%;
-}
-
-.imgPart {
-    width: 30%;
 }
 
 .dataRow {
     display: flex;
-    padding: 0 50px;
+    padding: 0 100px;
+    align-items: center;
 }
 
-.dataRow p, select, label {
-    padding: 0 5px;
+.dataRow p, b, select, label {
+    padding: 0 15px;
+    font-size: 16px;
 }
 
 .pokemonMoves {
@@ -49,4 +53,20 @@
 .pokemonDataDiv ::-webkit-scrollbar-thumb {
     background-color: #d4aa70;
     border-radius: 100px;
+}
+
+.imgSliderDiv{
+    display: none;
+    max-height: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    z-index: 990;
+    padding: 35px;
+    overflow: auto;
+    max-width: 700px;
+    min-width: 350px;
 }

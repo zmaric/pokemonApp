@@ -31,7 +31,7 @@ function TypePokemons() {
         {(pokemons.length > 0) ? pokemons.map((item, key) => (
           <ul key={key}>
             {item.pokemon.map((pokemon, key) => (
-                <li key={key}><img src={image}/><p style={{ transform: "translate(0, -220%)", fontSize: "26px" }}><Link style={{color: "#1a75ff", textDecoration: "none", webkitTextStroke: "1px white"}} to={`/pokemon/${pokemon.pokemon.name}`}>{pokemon.pokemon.name}</Link></p></li>
+                <li key={key}><img src={image}/><p style={{ transform: "translate(0, -200%)", fontSize: "26px" }}><Link style={{color: "#1a75ff", textDecoration: "none", webkitTextStroke: "1px white"}} to={`/pokemon/${pokemon.pokemon.name}`}>{pokemon.pokemon.name}</Link></p></li>
             ))}
           </ul>
         )) : <Loader type="Puff" color="#ff6666" style={{textAlign: "center"}}/> }
