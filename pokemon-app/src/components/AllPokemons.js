@@ -92,20 +92,20 @@ function AllPokemons() {
         {(!showAll) ? <button onClick={setShowAllPokemons}>SHOW ALL</button> : <button onClick={unsetShowAllPokemons}>SHOW IN TABLE</button>}
         <input type="text" id="search_pokemon" placeholder="Search.." onChange={(event => {setSearchData(event.target.value)})} />
       </div>
-      <form className="allPokemons_body" style={{margin: "auto", width: "55%"}}>
+      <form className="allPokemons_body" style={{margin: "auto"}}>
         <div>
           <ul>
           {(pokemons.length > 0 && !searchData && !showAll) ? currentData.map((item, key) => (
-            <li key={key}><img src={image}/><p style={{ transform: "translate(0, -200%)", fontSize: "26px" }}><Link style={{color: "#1a75ff", textDecoration: "none", WebkitTextStroke: "1px white"}} to={`/pokemon/${item.name}`}>{item.name}</Link></p></li>
+            <li key={key}><img src={image}/><p style={{ transform: "translate(0, -200%)"}}><Link style={{color: "#1a75ff", textDecoration: "none", WebkitTextStroke: "1px white"}} to={`/pokemon/${item.name}`}>{item.name}</Link></p></li>
           )) : (pokemons.length > 0 && searchData && !showAll) ? currentDataSearch.map((item, key) => (
-            <li key={key}><img src={image}/><p style={{ transform: "translate(0, -200%)", fontSize: "26px" }}><Link style={{color: "#1a75ff", textDecoration: "none", WebkitTextStroke: "1px white"}} to={`/pokemon/${item.name}`}>{item.name}</Link></p></li>
+            <li key={key}><img src={image}/><p style={{ transform: "translate(0, -200%)"}}><Link style={{color: "#1a75ff", textDecoration: "none", WebkitTextStroke: "1px white"}} to={`/pokemon/${item.name}`}>{item.name}</Link></p></li>
           )) : (showAll) ? pokemons.map((item, key) => (
-            <li key={key}><img src={image}/><p style={{ transform: "translate(0, -200%)", fontSize: "26px" }}><Link style={{color: "#1a75ff", textDecoration: "none", WebkitTextStroke: "1px white"}} to={`/pokemon/${item.name}`}>{item.name}</Link></p></li>
+            <li key={key}><img src={image}/><p style={{ transform: "translate(0, -200%)"}}><Link style={{color: "#1a75ff", textDecoration: "none", WebkitTextStroke: "1px white"}} to={`/pokemon/${item.name}`}>{item.name}</Link></p></li>
           )) : <Loader type="Puff" color="#ff6666" style={{textAlign: "center"}}/> }
           </ul>
         </div>
       </form>
-      <div className="paginationDiv" style={{display: "flex", width: "10%", margin: "auto", justifyContent: "center"}}>
+      <div className="paginationDiv" style={{display: "flex", flexWrap: "wrap", margin: "auto", justifyContent: "center"}}>
         {(!searchData && !showAll) ? pageNumber.map((item, key) => (
           <li key={key} style={{listStyle: "none", width: "25px", padding: "0 2px" }} onClick={() => setPages(item)}>{item}</li>
         )) : (searchData && !showAll) ? pageNumberSearch.map((item, key) => (

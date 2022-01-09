@@ -55,6 +55,14 @@
     border-radius: 100px;
 }
 
+.showMoreDiv{
+    width: 70%;
+    justify-content: center;
+}
+.showMorebtn {
+    margin-left: 35.7%;
+}
+
 .imgSliderDiv{
     display: none;
     max-height: 500px;
@@ -69,4 +77,60 @@
     overflow: auto;
     max-width: 700px;
     min-width: 350px;
+}
+
+@media only screen and (max-width: 1450px) {
+    .pokemonDataDiv {
+        width: 70%;
+    }
+    
+    .dataRow {
+        padding: 0 80px;
+    }
+    
+    .dataRow p, b, select, label {
+        font-size: 14px;
+    }
+
+    .showMorebtn {
+        margin-left: 21.5%;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .pokemonDataDiv {
+        width: 85%;
+    }
+    
+    .dataRow {
+        padding: 0 60px;
+    }
+    
+    .dataRow p, b, select, label {
+        padding: 0 13px;
+        font-size: 14px;
+    }
+
+    .showMorebtn {
+        margin-left: 11%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .pokemonDataDiv {
+        width: 100%;
+    }
+    
+    .dataRow {
+        padding: 0 40px;
+    }
+    
+    .dataRow p, b, select, label {
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .showMorebtn {
+        margin-left: 0;
+    }
 }

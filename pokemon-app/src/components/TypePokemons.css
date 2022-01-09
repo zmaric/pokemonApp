@@ -28,4 +28,54 @@
     height: 180px;
 }
 
+.typePokemons_body ul li p {
+    font-size: 26px;
+}
+
+
+
+@media only screen and (max-width: 1450px) {
+    .typePokemons_body {
+        width: 80%;
+    }
+
+    .typePokemons_body h3{
+        font-size: 40px;
+    }
+
+    .typePokemons_body img {
+        height: 100px;
+        weight: 100px;
+    }
+
+    .typePokemons_body ul li p {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .typePokemons_body {
+        width: 100%;
+    }
+    
+    .typePokemons_body h3{
+        font-size: 28px;
+    }
+
+    .typePokemons_body img {
+        height: 80px;
+        weight: 80px;
+    }
+
+    .typePokemons_body ul li p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .typePokemons_body h3{
+        font-size: 24px;
+    }
+}
+
 

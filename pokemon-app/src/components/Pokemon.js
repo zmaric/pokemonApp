@@ -85,9 +85,11 @@ function Pokemon() {
               </div>
             </div>
           </div>
-        <button style={{margin: "0 475px"}} onClick={() => document.getElementsByClassName("imgSliderDiv")[0].style.display = "block"}>Show more pictures</button>
+        <div className="showMoreDiv">
+          <button className="showMorebtn" onClick={() => document.getElementsByClassName("imgSliderDiv")[0].style.display = "block"}>Show more pictures</button>
+        </div>
         <div className="imgSliderDiv">
-          <button onClick={() => document.getElementsByClassName("imgSliderDiv")[0].style.display = "none"}>X</button>
+          <button style={{color: "white", background: "red"}} onClick={() => document.getElementsByClassName("imgSliderDiv")[0].style.display = "none"}>X</button>
           {(images.length > 0) ? <ImageSlider
             width={425}
             height={400}
@@ -95,7 +97,7 @@ function Pokemon() {
             images={images}
             showBullets={true}
             autoPlay={true}
-            style={{borderRadius: "25px"}}
+            style={{borderRadius: "25px", boxShadow: "2px 3px 23px rgba(0,0,0,.5)"}}
             /> : null }
           </div>
         </div>
