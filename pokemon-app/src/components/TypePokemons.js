@@ -16,7 +16,9 @@ function TypePokemons() {
     const getData = async () => {
     const res = await axios.get(`https://pokeapi.co/api/v2/type/${type_name}/`)
     setPokemons([res.data])
-    }
+    const res22 = await axios.get(`https://pokeapi.co/api/v2/type/`)
+    console.log(res22)
+  }
     getData()
   }, [])
 

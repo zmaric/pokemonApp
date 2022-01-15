@@ -1,4 +1,5 @@
 .AllPokemons {
+    width: 92%;
     font-family: "Pokemon Solid", sans-serif;
     color: yellow;
 }
@@ -69,6 +70,25 @@
     cursor: pointer;
 }
 
+.filterDiv {
+    display: flex;
+    flex-direction: column;
+    width: 8%;
+    font-family: "Allerta Stencil";
+    justify-content: center;
+    align-items: center;
+}
+
+.filterDiv button {
+    background: #3399ff;
+    font-family: "Allerta Stencil";
+    color: yellow;
+    font-size: 15px;
+    border: none;
+    height: 35px;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1450px) {
     .allPokemons_body {
         width: 80%;
@@ -93,6 +113,14 @@
         width: 120px;
         padding: 4px 10px;
         font-size: 14px;
+    }
+
+    .filterDiv {
+        width: 12%;
+    }
+    
+    .filterDiv button {
+        font-size: 13px;
     }
 
 }
@@ -122,9 +150,17 @@
         padding: 4px 0;
         font-size: 12px;
     }
+
+    .filterDiv button {
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
+    .AllPokemons {
+        width: 88%;
+    }
+
     .allPokemons_body {
         width: 100%;
     }
@@ -147,6 +183,14 @@
     .searchShowDiv input {
         width: 80px;
         padding: 4px 0;
+        font-size: 10px;
+    }
+
+    .filterDiv {
+        width: 12%;
+    }
+    
+    .filterDiv button {
         font-size: 10px;
     }
 }
