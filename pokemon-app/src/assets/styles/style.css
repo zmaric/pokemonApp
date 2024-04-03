@@ -1,0 +1,421 @@
+body {
+  background: #e8e8e8;
+  margin: 0px;
+  padding: 0px;
+}
+
+.AllPokemons {
+  width: 92%;
+  font-family: "Pokemon Solid", sans-serif;
+  color: yellow;
+}
+
+.allPokemons_body {
+  width: 55%;
+}
+
+.AllPokemons h3{
+  -webkit-text-stroke: 1px blue;
+  font-size: 100px;
+  height: 150px;
+  margin-top: -60px;
+  text-align: center;
+}
+
+.allPokemons_body img {
+  height: 130px;
+  weight: 130px;
+}
+
+.allPokemons_body ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  text-align: center;
+}
+
+.allPokemons_body ul li {
+  list-style: none;
+  flex: 0 0 20%;
+  height: 150px;
+}
+
+.allPokemons_body ul li p {
+  font-size: 26px;
+}
+
+.searchShowDiv {
+  float: right;
+  transform: translate(-200px, -60px);
+}
+
+.searchShowDiv button {
+  width: 200px;
+  border: none;
+  cursor: pointer;
+  padding: 5px 30px;
+  background: #3399ff;
+  font-family: "Allerta Stencil";
+  color: yellow;
+  font-size: 16px;
+}
+
+.searchShowDiv input {
+  width: 200px;
+  font-family: "Allerta Stencil";
+  padding: 4px 20px;
+  font-size: 16px;
+  border: 1px solid #3399ff;
+}
+
+.paginationDiv li {
+  font-size: 18px;
+  margin: 0 2px;
+  color: #e60000;;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.filterDiv {
+  display: flex;
+  flex-direction: column;
+  width: 8%;
+  font-family: "Allerta Stencil";
+  justify-content: center;
+  align-items: center;
+}
+
+.filterDiv button {
+  background: #3399ff;
+  font-family: "Allerta Stencil";
+  color: yellow;
+  font-size: 15px;
+  border: none;
+  height: 35px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1450px) {
+  .allPokemons_body {
+      width: 80%;
+  }
+
+  .allPokemons_body img {
+      height: 100px;
+      weight: 100px;
+  }
+
+  .allPokemons_body ul li p {
+      font-size: 22px;
+  }
+
+  .searchShowDiv button {
+      width: 120px;
+      padding: 5px 20px;
+      font-size: 14px;
+  }
+  
+  .searchShowDiv input {
+      width: 120px;
+      padding: 4px 10px;
+      font-size: 14px;
+  }
+
+  .filterDiv {
+      width: 12%;
+  }
+  
+  .filterDiv button {
+      font-size: 13px;
+  }
+
+}
+
+@media only screen and (max-width: 1150px) {
+  .allPokemons_body {
+      width: 80%;
+  }
+
+  .allPokemons_body img {
+      height: 80px;
+      weight: 80px;
+  }
+
+  .allPokemons_body ul li p {
+      font-size: 20px;
+  }
+
+  .searchShowDiv button {
+      width: 100px;
+      padding: 5px 10px;
+      font-size: 12px;
+  }
+  
+  .searchShowDiv input {
+      width: 100px;
+      padding: 4px 0;
+      font-size: 12px;
+  }
+
+  .filterDiv button {
+      font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .AllPokemons {
+      width: 88%;
+  }
+
+  .allPokemons_body {
+      width: 100%;
+  }
+
+  .allPokemons_body img {
+      height: 60px;
+      weight: 60px;
+  }
+
+  .allPokemons_body ul li p {
+      font-size: 16px;
+  }
+
+  .searchShowDiv button {
+      width: 80px;
+      padding: 5px 5px;
+      font-size: 10px;
+  }
+  
+  .searchShowDiv input {
+      width: 80px;
+      padding: 4px 0;
+      font-size: 10px;
+  }
+
+  .filterDiv {
+      width: 12%;
+  }
+  
+  .filterDiv button {
+      font-size: 10px;
+  }
+}
+
+.Pokemon button{
+  border: none;
+  cursor: pointer;
+  padding: 5px 30px;
+  background: #3399ff;
+  font-family: "Allerta Stencil";
+  color: yellow;
+  font-size: 16px;    
+}
+
+.pokemonDataDiv {
+  display: flex;
+  background: white;
+  box-shadow: 2px 3px 23px rgba(0,0,0,.1);
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+}
+
+.left{
+  width: 50%;
+}
+
+.right{
+  width: 50%;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.dataRow {
+  display: flex;
+  padding: 0 100px;
+  align-items: center;
+}
+
+.dataRow p, b, select, label {
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+.pokemonMoves {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/* scrollbar */
+.pokemonDataDiv ::-webkit-scrollbar {   
+  width: 16px;
+}
+.pokemonDataDiv ::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+.pokemonDataDiv ::-webkit-scrollbar-thumb {
+  background-color: #d4aa70;
+  border-radius: 100px;
+}
+
+.showMoreDiv{
+  width: 70%;
+  justify-content: center;
+}
+.showMorebtn {
+  margin-left: 35.7%;
+}
+
+.imgSliderDiv{
+  display: none;
+  max-height: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  z-index: 990;
+  padding: 35px;
+  overflow: auto;
+  max-width: 700px;
+  min-width: 350px;
+}
+
+@media only screen and (max-width: 1450px) {
+  .pokemonDataDiv {
+      width: 70%;
+  }
+  
+  .dataRow {
+      padding: 0 80px;
+  }
+  
+  .dataRow p, b, select, label {
+      font-size: 14px;
+  }
+
+  .showMorebtn {
+      margin-left: 21.5%;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .pokemonDataDiv {
+      width: 85%;
+  }
+  
+  .dataRow {
+      padding: 0 60px;
+  }
+  
+  .dataRow p, b, select, label {
+      padding: 0 13px;
+      font-size: 14px;
+  }
+
+  .showMorebtn {
+      margin-left: 11%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .pokemonDataDiv {
+      width: 100%;
+  }
+  
+  .dataRow {
+      padding: 0 40px;
+  }
+  
+  .dataRow p, b, select, label {
+      padding: 0 10px;
+      font-size: 12px;
+  }
+
+  .showMorebtn {
+      margin-left: 0;
+  }
+}
+
+.typePokemons_body {
+  font-family: "Pokemon Solid", sans-serif;
+  color: yellow;
+}
+
+.typePokemons_body h3{
+  -webkit-text-stroke: 1px blue;
+  font-size: 60px;
+  height: 100px;
+  margin-top: -20px;
+}
+
+.typePokemons_body img {
+  height: 130px;
+  weight: 130px;
+}
+
+.typePokemons_body ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  text-align: center;
+}
+
+.typePokemons_body ul li {
+  list-style: none;
+  flex: 0 0 20%;
+  height: 180px;
+}
+
+.typePokemons_body ul li p {
+  font-size: 26px;
+}
+
+
+
+@media only screen and (max-width: 1450px) {
+  .typePokemons_body {
+      width: 80%;
+  }
+
+  .typePokemons_body h3{
+      font-size: 40px;
+  }
+
+  .typePokemons_body img {
+      height: 100px;
+      weight: 100px;
+  }
+
+  .typePokemons_body ul li p {
+      font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .typePokemons_body {
+      width: 100%;
+  }
+  
+  .typePokemons_body h3{
+      font-size: 28px;
+  }
+
+  .typePokemons_body img {
+      height: 80px;
+      weight: 80px;
+  }
+
+  .typePokemons_body ul li p {
+      font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .typePokemons_body h3{
+      font-size: 24px;
+  }
+}
+
+

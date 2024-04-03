@@ -1,7 +1,6 @@
-import { useState } from 'react';
 import axios from 'axios'
 
-async function TypesPokemons(types) {
+async function fetchTypes(types) {
   let res = []
   for(let type of types){
     let res_data = await axios.get(`https://pokeapi.co/api/v2/type/${type.name}`)
@@ -13,4 +12,4 @@ async function TypesPokemons(types) {
   return res  
 }
 
-export default TypesPokemons
+export default fetchTypes
